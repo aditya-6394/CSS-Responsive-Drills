@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        color: black;
+      }
+      header,
+      footer {
+        background-color: lightgray;
+        height: 10vh;
+      }
+      main {
+        background-color: black;
+        height: 80vh;
+        display: flex;
+      }
+      .left {
+        flex-basis: 70%;
+        display: flex;
+        flex-direction: column;
+      }
+      .div-a {
+        background-color: tomato;
+        height: 50%;
+      }
+      .div-b {
+        height: 50%;
+        background-color: orange;
+      }
+      .right {
+        flex-basis: 30%;
+        background-color: yellow;
+      }
+
+      @media screen and (768px<=width<=998px) {
+        .left {
+          flex-basis: 50%;
+
+          display: flex;
+          flex-direction: column;
+        }
+        .div-a {
+          background-color: tomato;
+          height: 50%;
+        }
+        .div-b {
+          height: 50%;
+          background-color: orange;
+        }
+        .right {
+          flex-basis: 50%;
+          background-color: yellow;
+        }
+      }
+
+      @media (width<=768px) {
+        main {
+          display: flex;
+          flex-direction: column;
+        }
+        .left {
+          height: 66%;
+        }
+        .right {
+          height: 34%;
+        }
+        .div-a {
+          background-color: tomato;
+          height: 50%;
+        }
+        .div-b {
+          height: 50%;
+          background-color: orange;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <main>
+        <div class="left">
+          <div class="div-a">a</div>
+          <div class="div-b">b</div>
+        </div>
+        <div class="right">right</div>
+      </main>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>
